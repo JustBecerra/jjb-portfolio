@@ -15,7 +15,7 @@ import {
   huellitasURL,
   marvelSeekerGithubURL,
   marvelSeekerURL,
-} from "@/src/misc";
+} from "@/misc";
 
 export default function ProjectsMain() {
   const t = useTranslations("projects");

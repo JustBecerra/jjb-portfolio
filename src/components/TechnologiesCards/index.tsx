@@ -52,7 +52,6 @@ export const TechnologiesCards = ({
           mt: "1rem",
           gap: "2rem",
         }}
-        // className="justify-center items-center md:!mt-4 min-[310px]:!mt-1 md:gap-[2rem] min-[310px]:gap-[0rem]"
       >
         {technologies.map((tech, i) => (
           <Grid
