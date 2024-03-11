@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import favicon from "./favicon.ico";
+import { unstable_setRequestLocale } from "next-intl/server";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default async function RootLayout({
   params: any;
 }) {
   let messages;
+  unstable_setRequestLocale(locale);
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
   } catch (error) {
