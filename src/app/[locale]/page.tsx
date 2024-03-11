@@ -17,6 +17,11 @@ export default function Home() {
         width: "auto",
         marginBottom: 3,
         gap: "16rem",
+        // backgroundImage: `url('../../../public/night-road.jpg')`,
+        // backgroundRepeat: "no-repeat",
+        // backgroundSize: "cover",
+        // height: "auto",
+        // backgroundAttachment: "fixed",
       }}
     >
       <Navbar />

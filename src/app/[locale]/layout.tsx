@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { notFound } from "next/navigation";
 import favicon from "./favicon.ico";
-import { unstable_setRequestLocale } from "next-intl/server";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -13,9 +10,9 @@ export const metadata: Metadata = {
   description: "Awesome Portfolio",
   icons: [{ rel: "icon", url: favicon.src }],
 };
-const locales = ["en", "es"];
+
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return [{ locale: "en" }, { locale: "es" }];
 }
 
 export default async function RootLayout({
@@ -25,7 +22,6 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: any;
 }) {
-  unstable_setRequestLocale(locale);
   let messages;
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
