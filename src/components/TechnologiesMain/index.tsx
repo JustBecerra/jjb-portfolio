@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import { TechnologiesCards } from "../TechnologiesCards";
 import { useTranslations } from "next-intl";
-import { TechnologiesList } from "@/src/misc";
+import { TechnologiesList } from "@/misc";
 
 export default function Technologies() {
   const t = useTranslations("technologies");
