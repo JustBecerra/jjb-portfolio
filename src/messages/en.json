@@ -1,0 +1,25 @@
+{
+  "navbar": {
+    "homenavbar": "Home",
+    "technologiesnavbar": "Technologies",
+    "projectsnavbar": "Projects",
+    "language": "Language"
+  },
+  "home": {
+    "welcome": "Welcome, I'm Justo Becerra",
+    "intro": "Software engineer with 2 years of experience in developing and maintaining web and mobile applications.",
+    "ifyouwish": "If you wish to contact me, go ahead and check below"
+  },
+  "technologies": {
+    "frontendtech": "Frontend Technologies",
+    "backendtech": "Backend Technologies",
+    "year": "Year",
+    "years": "Years"
+  },
+  "projects": {
+    "huellitasdescription": "Social Media App I created along with teammates from SoyHenry's bootcamp, focused on helping people find lost pets using google maps API and a chat to coordinate with other users.",
+    "cryptotrackerdescription": "Mobile App created with React Native to track the price of the crypto currency you wish with their price updated in real time.",
+    "caloriecounterdescription": "App focused on tracking calories by using a US government provided API to control calories consumption and lose or gain weight.",
+    "marvelseekerdescription": "Web app to show Marvel characters and the comics they participate in, with dark mode included!"
+  }
+}

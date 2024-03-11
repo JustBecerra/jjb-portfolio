@@ -1,0 +1,25 @@
+{
+  "navbar": {
+    "homenavbar": "Inicio",
+    "technologiesnavbar": "Tecnologias",
+    "projectsnavbar": "Proyectos",
+    "language": "Lenguaje"
+  },
+  "home": {
+    "welcome": "Bienvenido, soy Justo Becerra",
+    "intro": "Desarrollador de software con 2 años de experiencia en desarrollo y mantenimiento de aplicaciones web y mobile.",
+    "ifyouwish": "Si esta interesado en contactarme, revise mi informacion abajo."
+  },
+  "technologies": {
+    "frontendtech": "Tecnologias Frontend",
+    "backendtech": "Tecnologias Backend",
+    "year": "Año",
+    "years": "Años"
+  },
+  "projects": {
+    "huellitasdescription": "Aplicacion de red social creada con compañeros del bootcamp de SoyHenry, con la idea de ayudar a usuarios con mascotas perdidas utilizando la API de google maps y un chat para coordinar con otros usuarios.",
+    "cryptotrackerdescription": "Aplicacion movil creada con React Native para seguir el precio de las crypto monedas que desee con precios actualizados en tiempo real.",
+    "caloriecounterdescription": "Aplicacion orientada en tener un seguimiento de calorias, utlizando una API proporcionada por el gobierno federal de EEUU para controlar el consumo de calorias para poder ganar o perder peso.",
+    "marvelseekerdescription": "Aplicacion web para mostrar personajes de Marvel y los comics en los que participan, con modo oscuro incluido!"
+  }
+}
