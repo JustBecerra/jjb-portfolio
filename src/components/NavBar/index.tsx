@@ -45,6 +45,7 @@ export const Navbar = () => {
 
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
+      console.log(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
 
@@ -60,10 +61,11 @@ export const Navbar = () => {
   const handleChange = (event: SelectChangeEvent) => {
     router.replace(pathname, { locale: event.target.value } as NavigateOptions);
   };
+
   return (
     <AppBar position="static" sx={{ backgroundColor: "transparent" }}>
       <Toolbar disableGutters>
-        {windowWidth > 620 ? (
+        {windowWidth > 1000 ? (
           <Box
             sx={{
               ml: "3%",
