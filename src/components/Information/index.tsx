@@ -16,6 +16,7 @@ export default function Information() {
         justifyContent: "center",
         alignItems: "center",
         gap: "2rem",
+        my: "8rem",
       }}
     >
       <Box sx={{ width: "500px", height: "500px", position: "relative" }}>

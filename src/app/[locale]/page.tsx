@@ -3,6 +3,7 @@ import { Navbar } from "../../components/NavBar";
 import Information from "../../components/Information";
 import TechnologiesMain from "../../components/TechnologiesMain";
 import ProjectsMain from "../../components/ProjectsMain";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   return (
@@ -16,18 +17,13 @@ export default function Home() {
         minHeight: "100vh",
         width: "auto",
         marginBottom: 3,
-        gap: "16rem",
-        // backgroundImage: `url('../../../public/night-road.jpg')`,
-        // backgroundRepeat: "no-repeat",
-        // backgroundSize: "cover",
-        // height: "auto",
-        // backgroundAttachment: "fixed",
       }}
     >
       <Navbar />
       <Information />
       <TechnologiesMain />
       <ProjectsMain />
+      <Footer />
     </Box>
   );
 }
