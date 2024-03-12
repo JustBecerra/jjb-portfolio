@@ -13,7 +13,7 @@ export default function Information() {
         height: "40%",
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
-        // justifyContent: "center",
+        justifyContent: "center",
         alignItems: "center",
         gap: "2rem",
         my: "8rem",
@@ -33,7 +33,7 @@ export default function Information() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "flex-start",
-          width: "80%",
+          width: { xs: "80%", md: "50%" },
           height: "50%",
           gap: "2rem",
         }}
@@ -43,6 +43,7 @@ export default function Information() {
             fontWeight: "medium",
             textAlign: "center",
             fontSize: "2.5rem",
+            whiteSpace: "normal",
           }}
         >
           {t("welcome")}

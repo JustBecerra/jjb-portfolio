@@ -25,7 +25,7 @@ export default function ProjectsMain() {
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         width: "80%",
-        height: "70vh",
+        height: { xs: "70%", md: "70vh" },
         gap: "2rem",
         my: "8rem",
         justifyContent: "space-between",

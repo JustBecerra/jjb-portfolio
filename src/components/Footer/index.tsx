@@ -12,7 +12,7 @@ export default function Footer() {
       sx={{
         marginBottom: "4rem",
         borderTop: "white solid 2px",
-        width: "40%",
+        width: { xs: "80%", md: "40%" },
         paddingTop: "2rem",
         display: "flex",
         flexDirection: "column",
@@ -25,7 +25,11 @@ export default function Footer() {
         {t("ifyouwish")}
       </Typography>
       <Box
-        sx={{ display: "flex", justifyContent: "space-around", width: "50%" }}
+        sx={{
+          display: "flex",
+          justifyContent: "space-around",
+          width: { xs: "90%", md: "50%" },
+        }}
       >
         <Link href="https://github.com/JustBecerra" target="_blank">
           <GitHubIcon
@@ -56,7 +60,13 @@ export default function Footer() {
             }}
           />
         </Link>
-        <Typography sx={{ fontSize: "1.25rem", fontWeight: "medium" }}>
+        <Typography
+          sx={{
+            fontSize: { xs: "1rem", md: "1.25rem" },
+            fontWeight: "medium",
+            textAlign: "center",
+          }}
+        >
           justj.becerra@gmail.com
         </Typography>
       </Box>
