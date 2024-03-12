@@ -12,31 +12,38 @@ export default function Information() {
         width: "100%",
         height: "40%",
         display: "flex",
-        flexDirection: "row",
+        flexDirection: { xs: "column", md: "row" },
         justifyContent: "center",
         alignItems: "center",
         gap: "2rem",
         my: "8rem",
       }}
     >
-      <Box sx={{ width: "500px", height: "500px", position: "relative" }}>
+      <Box
+        sx={{
+          width: { xs: "350px", md: "500px" },
+          height: { xs: "350px", md: "500px" },
+          position: "relative",
+        }}
+      >
         <Image src={sonriente} alt="" fill style={{ borderRadius: "1rem" }} />
       </Box>
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
-          width: "40%",
+          justifyContent: "flex-start",
+          width: { xs: "80%", md: "50%" },
           height: "50%",
           gap: "2rem",
         }}
       >
         <Typography
           sx={{
-            whiteSpace: "nowrap",
             fontWeight: "medium",
             textAlign: "center",
             fontSize: "2.5rem",
+            whiteSpace: "normal",
           }}
         >
           {t("welcome")}

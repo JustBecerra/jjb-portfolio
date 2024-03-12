@@ -43,7 +43,7 @@ export const TechnologiesCards = ({
         flexDirection: "column",
       }}
     >
-      <Typography className="!text-center">{title}</Typography>
+      <Typography sx={{ textAlign: "center" }}>{title}</Typography>
       <Grid
         container
         spacing={8}
@@ -58,7 +58,7 @@ export const TechnologiesCards = ({
           <Grid
             key={i}
             sx={{
-              width: "30%",
+              width: { xs: "90%", md: "30%" },
               "&&.MuiGrid-item": {
                 paddingTop: "1rem",
                 paddingLeft: windowWidth > 1024 ? "64px" : "3rem",
