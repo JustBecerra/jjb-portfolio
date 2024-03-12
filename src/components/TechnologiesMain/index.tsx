@@ -21,6 +21,7 @@ export default function Technologies() {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "baseline",
+        my: "8rem",
       }}
     >
       <TechnologiesCards
