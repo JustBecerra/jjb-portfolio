@@ -17,7 +17,11 @@ import {
   marvelSeekerURL,
 } from "@/misc";
 
-export default function ProjectsMain() {
+export default function ProjectsMain({
+  projectsRef,
+}: {
+  projectsRef: React.RefObject<HTMLDivElement>;
+}) {
   const t = useTranslations("projects");
   return (
     <Box
@@ -31,6 +35,7 @@ export default function ProjectsMain() {
         justifyContent: "space-between",
         alignItems: "baseline",
       }}
+      ref={projectsRef}
     >
       <ProjectCard
         title={"Huellitas"}

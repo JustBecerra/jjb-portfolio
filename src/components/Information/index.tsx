@@ -4,7 +4,11 @@ import Image from "next/image";
 import sonriente from "../../../public/sonriente.jpg";
 import { useTranslations } from "next-intl";
 
-export default function Information() {
+export default function Information({
+  informationRef,
+}: {
+  informationRef: React.RefObject<HTMLDivElement>;
+}) {
   const t = useTranslations("home");
   return (
     <Box
@@ -18,6 +22,7 @@ export default function Information() {
         gap: "2rem",
         my: "8rem",
       }}
+      ref={informationRef}
     >
       <Box
         sx={{

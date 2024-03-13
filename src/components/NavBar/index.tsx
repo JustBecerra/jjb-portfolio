@@ -21,11 +21,21 @@ import { useTranslations, useLocale } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavigateOptions } from "next/dist/shared/lib/app-router-context.shared-runtime";
-export const Navbar = () => {
+
+interface props {
+  scrollToComponent: (ref: React.RefObject<HTMLDivElement>) => void;
+  informationRef: React.RefObject<HTMLDivElement>;
+  technologiesRef: React.RefObject<HTMLDivElement>;
+  projectsRef: React.RefObject<HTMLDivElement>;
+}
+
+export const Navbar = (props: props) => {
   const [windowWidth, setWindowWidth] = React.useState(0);
   const [isMounted, setIsMounted] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const currentLocale = useLocale();
+  const { scrollToComponent, informationRef, technologiesRef, projectsRef } =
+    props;
   const toggleDrawer =
     (inOpen: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
@@ -45,7 +55,6 @@ export const Navbar = () => {
 
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
-      console.log(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
 
@@ -108,39 +117,36 @@ export const Navbar = () => {
               width={38}
               height={30}
             />
-            <Link href="/">
-              <Button
-                sx={{
-                  color: "white",
-                  fontWeight: "normal",
-                  textTransform: "none",
-                }}
-              >
-                {t("homenavbar")}
-              </Button>
-            </Link>
-            <Link href="/technologies">
-              <Button
-                sx={{
-                  color: "white",
-                  fontWeight: "normal",
-                  textTransform: "none",
-                }}
-              >
-                {t("technologiesnavbar")}
-              </Button>
-            </Link>
-            <Link href="/projects">
-              <Button
-                sx={{
-                  color: "white",
-                  fontWeight: "normal",
-                  textTransform: "none",
-                }}
-              >
-                {t("projectsnavbar")}
-              </Button>
-            </Link>
+            <Button
+              sx={{
+                color: "white",
+                fontWeight: "normal",
+                textTransform: "none",
+              }}
+              onClick={() => scrollToComponent(informationRef)}
+            >
+              {t("homenavbar")}
+            </Button>
+            <Button
+              sx={{
+                color: "white",
+                fontWeight: "normal",
+                textTransform: "none",
+              }}
+              onClick={() => scrollToComponent(technologiesRef)}
+            >
+              {t("technologiesnavbar")}
+            </Button>
+            <Button
+              sx={{
+                color: "white",
+                fontWeight: "normal",
+                textTransform: "none",
+              }}
+              onClick={() => scrollToComponent(projectsRef)}
+            >
+              {t("projectsnavbar")}
+            </Button>
           </Box>
         ) : (
           isMounted && (
