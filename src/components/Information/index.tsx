@@ -20,7 +20,7 @@ export default function Information({
         justifyContent: "center",
         alignItems: "center",
         gap: "2rem",
-        my: "8rem",
+        my: "12rem",
       }}
       ref={informationRef}
     >

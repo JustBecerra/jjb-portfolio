@@ -8,7 +8,6 @@ import {
   FormControl,
   IconButton,
   InputLabel,
-  Link,
   MenuItem,
   Select,
   SelectChangeEvent,
@@ -27,6 +26,7 @@ interface props {
   informationRef: React.RefObject<HTMLDivElement>;
   technologiesRef: React.RefObject<HTMLDivElement>;
   projectsRef: React.RefObject<HTMLDivElement>;
+  contactRef: React.RefObject<HTMLDivElement>;
 }
 
 export const Navbar = (props: props) => {
@@ -34,8 +34,13 @@ export const Navbar = (props: props) => {
   const [isMounted, setIsMounted] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const currentLocale = useLocale();
-  const { scrollToComponent, informationRef, technologiesRef, projectsRef } =
-    props;
+  const {
+    scrollToComponent,
+    informationRef,
+    technologiesRef,
+    projectsRef,
+    contactRef,
+  } = props;
   const toggleDrawer =
     (inOpen: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
@@ -72,7 +77,7 @@ export const Navbar = (props: props) => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "transparent" }}>
+    <AppBar position="sticky" sx={{ backgroundColor: "transparent" }}>
       <Toolbar disableGutters>
         {windowWidth > 1000 ? (
           <Box
@@ -147,6 +152,16 @@ export const Navbar = (props: props) => {
             >
               {t("projectsnavbar")}
             </Button>
+            <Button
+              sx={{
+                color: "white",
+                fontWeight: "normal",
+                textTransform: "none",
+              }}
+              onClick={() => scrollToComponent(contactRef)}
+            >
+              {t("contactnavbar")}
+            </Button>
           </Box>
         ) : (
           isMounted && (
@@ -181,39 +196,46 @@ export const Navbar = (props: props) => {
                     <MenuItem value="en">English</MenuItem>
                     <MenuItem value="es">Español</MenuItem>
                   </Select>
-                  <Link href="/">
-                    <Button
-                      sx={{
-                        color: "white",
-                        fontWeight: "normal",
-                        textTransform: "none",
-                      }}
-                    >
-                      {t("homenavbar")}
-                    </Button>
-                  </Link>
-                  <Link href="/technologies">
-                    <Button
-                      sx={{
-                        color: "white",
-                        fontWeight: "normal",
-                        textTransform: "none",
-                      }}
-                    >
-                      {t("technologiesnavbar")}
-                    </Button>
-                  </Link>
-                  <Link href="/projects">
-                    <Button
-                      sx={{
-                        color: "white",
-                        fontWeight: "normal",
-                        textTransform: "none",
-                      }}
-                    >
-                      {t("projectsnavbar")}
-                    </Button>
-                  </Link>
+                  <Button
+                    sx={{
+                      color: "white",
+                      fontWeight: "normal",
+                      textTransform: "none",
+                    }}
+                    onClick={() => scrollToComponent(informationRef)}
+                  >
+                    {t("homenavbar")}
+                  </Button>
+                  <Button
+                    sx={{
+                      color: "white",
+                      fontWeight: "normal",
+                      textTransform: "none",
+                    }}
+                    onClick={() => scrollToComponent(technologiesRef)}
+                  >
+                    {t("technologiesnavbar")}
+                  </Button>
+                  <Button
+                    sx={{
+                      color: "white",
+                      fontWeight: "normal",
+                      textTransform: "none",
+                    }}
+                    onClick={() => scrollToComponent(projectsRef)}
+                  >
+                    {t("projectsnavbar")}
+                  </Button>
+                  <Button
+                    sx={{
+                      color: "white",
+                      fontWeight: "normal",
+                      textTransform: "none",
+                    }}
+                    onClick={() => scrollToComponent(contactRef)}
+                  >
+                    {t("contactnavbar")}
+                  </Button>
                 </Box>
               </Drawer>
             </>

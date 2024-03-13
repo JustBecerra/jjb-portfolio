@@ -31,7 +31,7 @@ export default function ProjectsMain({
         width: "80%",
         height: { xs: "70%", md: "70vh" },
         gap: "2rem",
-        my: "8rem",
+        my: "12rem",
         justifyContent: "space-between",
         alignItems: "baseline",
       }}

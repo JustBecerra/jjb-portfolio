@@ -11,10 +11,14 @@ export default function Home() {
   const informationRef = useRef<HTMLDivElement>(null);
   const technologiesRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   const scrollToComponent = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
+      ref.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
     }
   };
 
@@ -36,11 +40,12 @@ export default function Home() {
         informationRef={informationRef}
         technologiesRef={technologiesRef}
         projectsRef={projectsRef}
+        contactRef={contactRef}
       />
       <Information informationRef={informationRef} />
       <TechnologiesMain technologiesRef={technologiesRef} />
       <ProjectsMain projectsRef={projectsRef} />
-      <Footer />
+      <Footer contactRef={contactRef} />
     </Box>
   );
 }
