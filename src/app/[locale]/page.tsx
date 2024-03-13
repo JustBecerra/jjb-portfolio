@@ -18,9 +18,6 @@ export default function Home() {
     }
   };
 
-  // const handleClickComponent = (ref: React.RefObject<HTMLDivElement>) => () => {
-  //   scrollToComponent(ref);
-  // };
   return (
     <Box
       component="main"
