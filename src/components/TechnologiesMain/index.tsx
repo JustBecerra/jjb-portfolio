@@ -5,7 +5,11 @@ import { TechnologiesCards } from "../TechnologiesCards";
 import { useTranslations } from "next-intl";
 import { TechnologiesList } from "@/misc";
 
-export default function Technologies() {
+export default function Technologies({
+  technologiesRef,
+}: {
+  technologiesRef: React.RefObject<HTMLDivElement>;
+}) {
   const t = useTranslations("technologies");
   const frontendTechnologies = TechnologiesList.filter(
     (tech) => tech.area === "frontend"
@@ -23,6 +27,7 @@ export default function Technologies() {
         alignItems: "baseline",
         my: "8rem",
       }}
+      ref={technologiesRef}
     >
       <TechnologiesCards
         technologies={frontendTechnologies}
