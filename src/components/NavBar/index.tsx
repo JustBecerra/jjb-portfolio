@@ -8,7 +8,6 @@ import {
   FormControl,
   IconButton,
   InputLabel,
-  Link,
   MenuItem,
   Select,
   SelectChangeEvent,
@@ -203,28 +202,39 @@ export const Navbar = (props: props) => {
                       fontWeight: "normal",
                       textTransform: "none",
                     }}
+                    onClick={() => scrollToComponent(informationRef)}
                   >
                     {t("homenavbar")}
                   </Button>
-                  <Link href="/technologies">
-                    <Button
-                      sx={{
-                        color: "white",
-                        fontWeight: "normal",
-                        textTransform: "none",
-                      }}
-                    >
-                      {t("technologiesnavbar")}
-                    </Button>
-                  </Link>
                   <Button
                     sx={{
                       color: "white",
                       fontWeight: "normal",
                       textTransform: "none",
                     }}
+                    onClick={() => scrollToComponent(technologiesRef)}
+                  >
+                    {t("technologiesnavbar")}
+                  </Button>
+                  <Button
+                    sx={{
+                      color: "white",
+                      fontWeight: "normal",
+                      textTransform: "none",
+                    }}
+                    onClick={() => scrollToComponent(projectsRef)}
                   >
                     {t("projectsnavbar")}
+                  </Button>
+                  <Button
+                    sx={{
+                      color: "white",
+                      fontWeight: "normal",
+                      textTransform: "none",
+                    }}
+                    onClick={() => scrollToComponent(contactRef)}
+                  >
+                    {t("contactnavbar")}
                   </Button>
                 </Box>
               </Drawer>
