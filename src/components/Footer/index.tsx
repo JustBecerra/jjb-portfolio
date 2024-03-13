@@ -5,7 +5,11 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import React from "react";
 
-export default function Footer() {
+export default function Footer({
+  contactRef,
+}: {
+  contactRef: React.RefObject<HTMLDivElement>;
+}) {
   const t = useTranslations("home");
   return (
     <Box
@@ -20,6 +24,7 @@ export default function Footer() {
         alignItems: "center",
         gap: "1rem",
       }}
+      ref={contactRef}
     >
       <Typography sx={{ fontSize: "1.25rem", textAlign: "center" }}>
         {t("ifyouwish")}

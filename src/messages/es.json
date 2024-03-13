@@ -1,8 +1,9 @@
 {
   "navbar": {
     "homenavbar": "información",
-    "technologiesnavbar": "Tecnologias",
+    "technologiesnavbar": "Tecnologías",
     "projectsnavbar": "Proyectos",
+    "contactnavbar": "Contacto",
     "language": "Lenguaje"
   },
   "home": {
@@ -11,8 +12,8 @@
     "ifyouwish": "Si esta interesado en contactarme, revise mi información abajo."
   },
   "technologies": {
-    "frontendtech": "Tecnologias Frontend",
-    "backendtech": "Tecnologias Backend",
+    "frontendtech": "Tecnologías Frontend",
+    "backendtech": "Tecnologías Backend",
     "year": "Año",
     "years": "Años"
   },
