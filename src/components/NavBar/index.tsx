@@ -17,9 +17,8 @@ import Image from "next/image";
 import britishflag from "../../../public/britishflag.png";
 import spanishflag from "../../../public/spanishflag.png";
 import { useTranslations, useLocale } from "next-intl";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import MenuIcon from "@mui/icons-material/Menu";
-import { NavigateOptions } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
 interface props {
   scrollToComponent: (ref: React.RefObject<HTMLDivElement>) => void;
@@ -70,10 +69,9 @@ export const Navbar = (props: props) => {
 
   const t = useTranslations("navbar");
   const router = useRouter();
-  const pathname = usePathname();
 
   const handleChange = (event: SelectChangeEvent) => {
-    router.replace(pathname, { locale: event.target.value } as NavigateOptions);
+    router.replace(event.target.value);
   };
 
   return (
