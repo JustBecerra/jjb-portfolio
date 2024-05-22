@@ -1,12 +1,12 @@
-"use client";
-import { Box } from "@mui/material";
-import { ProjectCard } from "../ProjectCard";
-import { useTranslations } from "next-intl";
-import huellitasSH from "../../../public/huellitasSH.png";
-import caloriecounterSH from "../../../public/caloriecounterSH.png";
-import cryptotrackerSH from "../../../public/cryptotrackerSH.png";
-import marvelseekerSH from "../../../public/marvelseekerSH.png";
-import React from "react";
+'use client';
+import { Box } from '@mui/material';
+import { ProjectCard } from '../ProjectCard';
+import { useTranslations } from 'next-intl';
+import huellitasSH from '../../../public/huellitasSH.png';
+import caloriecounterSH from '../../../public/caloriecounterSH.png';
+import cryptotrackerSH from '../../../public/cryptotrackerSH.png';
+import marvelseekerSH from '../../../public/marvelseekerSH.png';
+import React, { useContext } from 'react';
 import {
   calorieCounterGitHubURL,
   calorieCounterURL,
@@ -15,54 +15,52 @@ import {
   huellitasURL,
   marvelSeekerGithubURL,
   marvelSeekerURL,
-} from "@/misc";
+} from '@/misc';
+import PortfolioContext from '@/context/provider';
 
-export default function ProjectsMain({
-  projectsRef,
-}: {
-  projectsRef: React.RefObject<HTMLDivElement>;
-}) {
-  const t = useTranslations("projects");
+export default function ProjectsMain() {
+  const { projectsRef } = useContext(PortfolioContext);
+  const t = useTranslations('projects');
   return (
     <Box
       sx={{
-        display: "flex",
-        flexDirection: { xs: "column", md: "row" },
-        width: "80%",
-        height: { xs: "70%", md: "70vh" },
-        gap: "2rem",
-        my: "12rem",
-        justifyContent: "space-between",
-        alignItems: "baseline",
+        display: 'flex',
+        flexDirection: { xs: 'column', md: 'row' },
+        width: '80%',
+        height: { xs: '70%', md: '70vh' },
+        gap: '2rem',
+        my: '12rem',
+        justifyContent: 'space-between',
+        alignItems: 'baseline',
       }}
       ref={projectsRef}
     >
       <ProjectCard
-        title={"Huellitas"}
+        title={'Huellitas'}
         screenshot={huellitasSH}
         url={huellitasURL}
-        description={t("huellitasdescription")}
+        description={t('huellitasdescription')}
         github={huellitasGithubURL}
       />
       <ProjectCard
-        title={"Calorie Counter"}
+        title={'Calorie Counter'}
         screenshot={caloriecounterSH}
         url={calorieCounterURL}
         github={calorieCounterGitHubURL}
-        description={t("caloriecounterdescription")}
+        description={t('caloriecounterdescription')}
       />
       <ProjectCard
-        title={"Crypto Tracker"}
+        title={'Crypto Tracker'}
         screenshot={cryptotrackerSH}
         github={cryptoTrackerGithubURL}
-        description={t("cryptotrackerdescription")}
+        description={t('cryptotrackerdescription')}
       />
       <ProjectCard
-        title={"Marvel Seeker"}
+        title={'Marvel Seeker'}
         screenshot={marvelseekerSH}
         url={marvelSeekerURL}
         github={marvelSeekerGithubURL}
-        description={t("marvelseekerdescription")}
+        description={t('marvelseekerdescription')}
       />
     </Box>
   );
